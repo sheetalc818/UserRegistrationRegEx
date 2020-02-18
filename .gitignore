@@ -1,3 +1,4 @@
 *.sh.save
 *.sh.save.1
 *.sh.swp
+.git
