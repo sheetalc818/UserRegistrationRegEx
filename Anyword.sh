@@ -49,7 +49,24 @@ function emailRegEx()
 	fi
 }
 
+#As a User need to follow predefined
+#Mobile Format - E.g. 91 9919819801 - Country code follow by space
+function mobileRegEx()
+{
+	echo "Enter mobile number to check for the regex:"
+	read mobileNo
+
+	regEx="^[0-9]{2}[ ][0-9]{10}$"
+	if [[ $mobileNo =~ $regEx ]]
+	then
+		echo "Valid Mobile number!!"
+	else
+		echo "Enter the valid 10 digit mobile number!!"
+	fi
+}
+
 #Calling function
 firstNameRegEx
 lastNameRegEx
 emailRegEx
+mobileRegEx
