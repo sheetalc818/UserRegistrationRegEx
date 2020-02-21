@@ -65,8 +65,24 @@ function mobileRegEx()
 	fi
 }
 
+#As a User need to follow predefined Password rules.
+#Rule1 minimum 8 Characters - NOTE – All rules must
+function passwordRegEx()
+{
+	echo "Enter the password to Validate:"
+	read password
+
+	regEx="[A-Za-z]{7,}"
+	if [[ $password =~ $regEx ]]
+	then
+		echo "Valid password!!"
+	else
+		echo "Enter valid password with the min length 8"
+	fi
+}
 #Calling function
-firstNameRegEx
-lastNameRegEx
-emailRegEx
-mobileRegEx
+#firstNameRegEx
+#lastNameRegEx
+#emailRegEx
+#mobileRegEx
+passwordRegEx
