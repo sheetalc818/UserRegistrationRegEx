@@ -68,23 +68,24 @@ function mobileRegEx()
 #As a User need to follow predefined Password rules.
 #Rule1 Minimum 8 Characters
 #Rule2 Must start with capital letter
+#Rule3 Should have atleast one Numeric number
 function passwordRegEx()
 {
 	echo "Enter the password to Validate:"
 	read password
 
-	regEx="^[A-Z][a-zA-Z]{7,}"
+	regEx="^[A-Z][a-z0-9]{7,}$"
 	if [[ $password =~ $regEx ]]
 	then
 		echo "Valid password!!"
 	else
-		echo "Please enter valid password with the min length 8 and Starting with Capital letter"
+		echo "Enter password with min length 8 and Starting with Capital letter and should contain atleast one digit"
 	fi
 }
 
 #Calling function
-firstNameRegEx
-lastNameRegEx
-emailRegEx
-mobileRegEx
+#firstNameRegEx
+#lastNameRegEx
+#emailRegEx
+#mobileRegEx
 passwordRegEx
